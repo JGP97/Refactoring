@@ -1,8 +1,9 @@
-function Function1(){
-    var num;
-    var num1;
-    var sol;
-    num = parseInt(document.getElementById("numero").value);
-    num1 = parseInt(document.getElementById("numero1").value);
-    document.getElementById("p1").innerHTML = num1+num;
+const $NUMERO1 = document.getElementById("numero1")
+const $NUMERO2 = document.getElementById("numero2")
+
+function sumar() {
+    const num1 = parseFloat($NUMERO1.value)
+    const num2 = parseFloat($NUMERO2.value)
+
+    document.getElementById("p1").innerText = num1 + num2
 }
