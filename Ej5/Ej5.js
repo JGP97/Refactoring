@@ -1,9 +1,16 @@
 function CuentaVocales(){
     var texto=document.getElementById("texto").value;
+    const vocales="aeiouáéíóú", vocalesmayus = vocales.toUpperCase();
     var cont=0;    
-    for(i=0;i<texto.length;i++){
-        if(texto[i]=='a'||texto[i]=='e'||texto[i]=='i'||texto[i]=='o'||texto[i]=='u'||texto[i]=='A'||texto[i]=='E'||texto[i]=='I'||texto[i]=='O'||texto[i]=='U'){
-            cont++;            
+    for(i=0;i<texto.length;i++)
+    {
+        for(j=0; j<vocales.length; j++)
+        {
+            if(vocales[j]==texto[i] || vocalesmayus[j]==texto[i])
+            {
+                cont++;
+                break;
+            }
         }
     }
     document.getElementById("p1").innerHTML=cont;
